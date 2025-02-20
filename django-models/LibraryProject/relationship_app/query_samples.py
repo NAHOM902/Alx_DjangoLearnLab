@@ -7,6 +7,7 @@ def query_author(author_name):
     try:
         author = Author.objects.get(name=author_name)
         books = author.books.filter(author=author)
+        return books
         print(f"Books by author {author_name}:")
         for i in books:
             print(f"- {i.title}")
