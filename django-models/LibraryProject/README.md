@@ -1,0 +1,1 @@
+this is an introduction part for django framework for python !!
