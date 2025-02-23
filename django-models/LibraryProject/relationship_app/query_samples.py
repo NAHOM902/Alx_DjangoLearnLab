@@ -8,9 +8,9 @@ def query_author(author_name):
         author = Author.objects.get(name=author_name)
         books = Book.objects.filter(author=author)
         return books
-        print(f"Books by author {author_name}:")
-        for i in books:
-            print(f"- {i.title}")
+        # print(f"Books by author {author_name}:")
+        # for i in books:
+        #     print(f"- {i.title}")
 
     except Author.DoesNotExist:
         print(f"Author '{author_name}' not found")
