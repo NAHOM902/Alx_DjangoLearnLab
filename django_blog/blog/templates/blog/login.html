@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} Welcome to BlogPost login page {% endblock %}
+
+{% block content %}
+    <h2>®|LOGIN PAGE.......... |®</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">login</button>
+
+    </form>
+
+{% endblock %}
+
