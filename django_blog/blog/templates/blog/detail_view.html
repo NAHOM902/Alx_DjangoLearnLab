@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+
+{% block content %}
+
+        <h2><b>{{post.title}}</b></h2><br/>
+        {{post.content}}
+        <hr/>
+        By: {{post.author}}<br/>
+        Date: {{post.published_date }}
+        <br/>
+        <br/>
+        <a href="{% url 'post-list' %}">Back to Home</a> 
+    
+{% endblock %}
