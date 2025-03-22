@@ -15,7 +15,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 class BlogPostCreateView( LoginRequiredMixin, CreateView):
     model = Post
-    template_name = 'blog/create.html'
+    template_name = 'blog/post_create.html'
     fields = ['author', 'title', 'content']
     
     
@@ -31,12 +31,12 @@ class BlogPostCreateView( LoginRequiredMixin, CreateView):
 class BlogPostListView(ListView):
     model = Post
     context_object_name = 'post'
-    template_name = 'blog/list_view.html'
+    template_name = 'blog/post_form.html'
 
 class BlogPostDetailView(DetailView):
     model = Post
     context_object_name = 'post'
-    template_name = 'blog/detail_view.html'
+    template_name = 'blog/post_detail.html'
 
 class BlogPostEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
@@ -54,7 +54,7 @@ class BlogPostEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class BlogPostDeleteView(DeleteView):
     model = Post
-    template_name = 'blog/delete.html'
+    template_name = 'blog/Post_confirm_delete.html'
     success_url = reverse_lazy('post-list')
 
 
