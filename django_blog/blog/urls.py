@@ -13,7 +13,7 @@ urlpatterns = [
     path('profile/', ProfileView, name="profile"),
 
     #Blog Post URLs
-    path('posts/', BlogPostListView.as_view(), name="post-list"),
+    path('post/', BlogPostListView.as_view(), name="post-list"),
     path("post/<int:pk>/", BlogPostDetailView.as_view(), name="post-detail"),
     path("post/new", BlogPostCreateView.as_view(), name="post-create"),
     path("post/<int:pk>/update", BlogPostEditView.as_view(), name="post-edit"),
