@@ -7,9 +7,9 @@ from .models import User
 from accounts.models import CustomUser
 from .models import CustomUser
 
-#CustomUser = get_user_model()
+CustomUser = get_user_model()
 User = get_user_model()
-#.objects.create_user
+Token.objects.create_user
 
 class UserDetailSerializer(serializers.ModelSerializer):
     class Meta:
